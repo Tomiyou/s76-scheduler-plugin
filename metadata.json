@@ -2,10 +2,10 @@
   "name": "System76 Scheduler",
   "description": "Integrates with System76 Scheduler to prioritise foreground processes.\nNote: system76-scheduler must be installed separately!\nThis extension is not affiliated with nor supported by System76.",
   "uuid": "s76-scheduler@mattjakeman.com",
-  "version": 6,
+  "version": 8,
   "url": "https://github.com/mjakeman/s76-scheduler-plugin/",
   "shell-version": [
-    "45"
+    "47"
   ],
   "gettext-domain": "s76-scheduler-plugin"
 }

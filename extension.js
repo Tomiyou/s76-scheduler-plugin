@@ -21,7 +21,7 @@
 
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
-import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const SchedulerInterface = '<node>\
 <interface name="com.system76.Scheduler"> \
@@ -42,11 +42,7 @@ const SchedProxy = new SchedulerProxy(
 let foreground = 0;
 let sourceIds = [];
 
-export default class Extension {
-    constructor(uuid) {
-        this._uuid = uuid;
-    }
-
+export default class PlainExampleExtension extends Extension {
     enable() {
         log("Initialising system76-scheduler integration");
 
@@ -93,8 +89,4 @@ export default class Extension {
             GLib.Source.remove(idleId);
         }
     }
-}
-
-function init(meta) {
-    return new Extension(meta.uuid);
 }
